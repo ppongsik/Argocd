@@ -1,0 +1,17 @@
+service:
+  type: NodePort
+  nodePort: 31234
+
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "1.21.1"
+
+resources:
+  limits:
+    cpu: 0.1
+    memory: 128Mi
+  requests:
+    cpu: 0.1
+    memory: 128Mi
